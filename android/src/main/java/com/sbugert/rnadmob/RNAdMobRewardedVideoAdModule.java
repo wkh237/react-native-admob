@@ -94,6 +94,11 @@ public class RNAdMobRewardedVideoAdModule extends ReactContextBaseJavaModule imp
         requestAdCallback.invoke(errorString);
     }
 
+    @Override
+    public void onRewardedVideoCompleted() {
+
+    }
+
     private void sendEvent(String eventName, @Nullable WritableMap params) {
         getReactApplicationContext().getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
     }
